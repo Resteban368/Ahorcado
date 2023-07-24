@@ -20,7 +20,7 @@ class ScoreScreen extends StatelessWidget {
             child: Column(
               children: [
                 const AppBar_widget(
-                  title: 'High Scores',
+                  title: 'Mejores Puntajes',
                   rutaGoBack: '/',
                 ),
                 const SizedBox(

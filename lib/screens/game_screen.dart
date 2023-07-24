@@ -209,9 +209,6 @@ class GameScreen extends StatelessWidget {
     ));
 
 
-
-
-
   }
 
      //         state.selectedChar

@@ -1,16 +1,13 @@
-# hangman
+## Flutter Ahorcado
+<img width="150" height="150" src="assets/gallow.png" />
+Un juego del ahorcado escrito en Dart con marco Flutter manejando el gestor de estado de Bloc. El jugador tiene 3 vidas en cada turno. Los puntajes anteriores se pueden ver en la página de puntajes altos.
 
-A new Flutter project.
+<img src="assets/images/gif1.gif" width="240" height="500" />
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Development Setup
+Clone the repository and run the following commands:
+```
+flutter pub get
+flutter run
+```

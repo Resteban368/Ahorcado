@@ -1,27 +1,72 @@
+// ignore_for_file: annotate_overrides, overridden_fields
+
 part of 'game_bloc.dart';
 
 sealed class GameState {
-  GameState({required this.palabra, required this.pista});
-  final int live = 3; //vidas
-  final int tries = 0; //intentos
-  final int score = 0; //puntaje
-  final List<String> selectedChar = [];
   final String palabra;
   final String pista;
-}
-
-class GameInitial extends GameState {
-  GameInitial({required super.palabra, required super.pista});
-}
-
-//estado para cuando agrego una letra a la lista de letras seleccionadas
-class GameSelectCharState extends GameState {
-  final List<String> selectedChar;
   final int tries;
+  final List<String> selectedChar;
+  final int score;
+  final int live;
 
-  GameSelectCharState({
-      required this.tries, 
-      required super.palabra,
+  GameState({
+    required this.palabra,
+    required this.pista,
+    required this.tries,
+    required this.selectedChar,
+    required this.score,
+    required this.live,
+  });
+}
+
+//estado cuando comienza el juego
+class StartGame extends GameState {
+  StartGame({
+    required super.palabra,
+    required super.pista,
+    required super.tries,
+    required super.selectedChar,
+    required super.score,
+    required super.live,
+  });
+}
+
+//estado cuando Inicia el juego
+class GameInitial extends GameState {
+  GameInitial(
+      {required super.palabra,
       required super.pista,
-      required this.selectedChar});
+      required super.tries,
+      required super.selectedChar,
+      required super.score,
+      required super.live});
+}
+
+
+
+//estado para selecciono una letra
+class GameSelectCharState extends GameState {
+  GameSelectCharState(
+      {required super.palabra,
+      required super.pista,
+      required super.tries,
+      required super.selectedChar,
+      required super.score,
+      required super.live});
+}
+
+//estadi para cuando termina el juego
+class GameEndState extends GameState {
+  final String namePlayer;
+
+  GameEndState({
+    required this.namePlayer,
+    required super.palabra,
+    required super.pista,
+    required super.tries,
+    required super.selectedChar,
+    required super.score,
+    required super.live,
+  });
 }
